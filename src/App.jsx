@@ -7,13 +7,18 @@ function App() {
       <section>
         <h2>Why work with us?</h2>
         <Accordion className="accordion">
-          <AccordionItem title="This is just best!" className="accordion-item">
+          <AccordionItem
+            id="1"
+            title="This is just best!"
+            className="accordion-item"
+          >
             <article>
               <p>You will be the best by using that!</p>
               <p>We are in the business which is made for people like you!</p>
             </article>
           </AccordionItem>
           <AccordionItem
+            id="2"
             title="This is the right place!"
             className="accordion-item"
           >
