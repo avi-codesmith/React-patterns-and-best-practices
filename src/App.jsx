@@ -1,5 +1,6 @@
 import Accordion from "./components/Accordion";
-import AccordionItem from "./components/Accordion-item";
+import { PLACES } from "./components/places";
+import SearchableList from "./components/SearchableList/SearchableList";
 
 function App() {
   return (
@@ -7,27 +8,39 @@ function App() {
       <section>
         <h2>Why work with us?</h2>
         <Accordion className="accordion">
-          <AccordionItem
+          <Accordion.Item
             id="1"
             title="This is just best!"
             className="accordion-item"
           >
             <article>
-              <p>You will be the best by using that!</p>
-              <p>We are in the business which is made for people like you!</p>
+              <Accordion.Title className="accordion-item-title">
+                You are luckiest animal in this whole world! ▼
+              </Accordion.Title>
+              <Accordion.Description className="accordion-item-content">
+                We are in the business which is made for animals like you!
+              </Accordion.Description>
             </article>
-          </AccordionItem>
-          <AccordionItem
+          </Accordion.Item>
+          <Accordion.Item
             id="2"
             title="This is the right place!"
             className="accordion-item"
           >
             <article>
-              <p>You are luckiest animal in this whole world!</p>
-              <p>We are here for you!</p>
+              <Accordion.Title className="accordion-item-title">
+                You are luckiest animal in this whole world! ▼
+              </Accordion.Title>
+              <Accordion.Description className="accordion-item-content">
+                We are in the business which is made for animals like you!
+              </Accordion.Description>
             </article>
-          </AccordionItem>
+          </Accordion.Item>
         </Accordion>
+      </section>
+      <section>
+        <SearchableList items={PLACES} />
+        <SearchableList items={["1", "2", "3"]} />
       </section>
     </main>
   );
